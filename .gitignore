@@ -5,7 +5,6 @@
 .vscode/
 
 .env*
-.emergent
 
 # Dependencies
 node_modules/
