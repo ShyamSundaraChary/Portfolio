@@ -73,7 +73,6 @@ Edit
 ## 📸 Screenshots
 
 _Add screenshots of your homepage, project section, and contact form if you have._
-
 ---
 
 ## 📜 License
