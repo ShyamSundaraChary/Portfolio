@@ -9,25 +9,33 @@ import { Code, Database, Palette, Wrench } from 'lucide-react'
 export default function About() {
   const skills = {
     Frontend: [
-      'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Next.js', 'Framer Motion'
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+      "Next.js",
+      "Framer Motion",
     ],
     Backend: [
-      'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'REST APIs', 'JWT', 'Socket.io'
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MySQL",
+      "REST APIs",
+      "JWT",
+      "Socket.io",
     ],
-    Languages: [
-      'Python', 'Java', 'C++', 'C', 'JavaScript', 'SQL', 'NoSQL'
-    ],
-    Tools: [
-      'Git', 'GitHub', 'Postman', 'VS Code', 'Firebase', 'Vercel'
-    ]
-  }
+    Languages: ["Python", "Java", "C++", "C", "JavaScript", "SQL", "NoSQL"],
+    Tools: ["Git", "GitHub", "Postman", "VS Code", "Firebase", "Vercel"],
+  };
 
   const skillIcons = {
     Frontend: <Palette className="h-5 w-5" />,
     Backend: <Database className="h-5 w-5" />,
     Languages: <Code className="h-5 w-5" />,
-    Tools: <Wrench className="h-5 w-5" />
-  }
+    Tools: <Wrench className="h-5 w-5" />,
+  };
 
   return (
     <div className="min-h-screen pt-20 pb-12">

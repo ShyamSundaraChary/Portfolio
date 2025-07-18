@@ -28,7 +28,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const res = await fetch("/api/contact", {
+    const res = await fetch("/api", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
