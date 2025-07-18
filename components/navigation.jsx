@@ -1,12 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { Menu, X, Moon, Sun } from 'lucide-react'
-import { useTheme } from 'next-themes'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
