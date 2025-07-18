@@ -274,6 +274,7 @@ class BackendTester:
         print("\n" + "=" * 60)
         print("📊 BACKEND TESTING SUMMARY")
         print("=" * 60)
+        # print("Test Results by Category:")
         
         total_passed = 0
         total_failed = 0
