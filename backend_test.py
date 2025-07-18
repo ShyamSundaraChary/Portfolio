@@ -306,3 +306,7 @@ class BackendTester:
         
         return total_failed == 0
 
+if __name__ == "__main__":
+    tester = BackendTester()
+    success = tester.run_all_tests()
+    exit(0 if success else 1)
