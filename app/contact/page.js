@@ -25,16 +25,27 @@ export default function Contact() {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    toast.success('Message sent successfully! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    setIsSubmitting(false)
-  }
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (res.ok) {
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
+
+    setIsSubmitting(false);
+  };
+
 
   const contactInfo = [
     {
@@ -275,7 +286,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mt-16 text-center"
           >
-            <Card className="border-2 border-gradient-to-r from-blue-500/20 to-purple-500/20 bg-gradient-to-br from-blue-500/5 to-purple-500/5">
+            <Card className="border-2 border-gradient-to-r  bg-gradient-to-br from-blue-500/5 to-purple-500/5">
               <CardContent className="p-12">
                 <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                   Ready to Start Your Project?

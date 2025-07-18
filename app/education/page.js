@@ -14,7 +14,7 @@ export default function Education() {
       field: 'Computer Science Engineering',
       period: 'June 2022 – June 2026',
       location: 'Hyderabad, India',
-      cgpa: '8.1',
+      cgpa: '8.5',
       status: 'Pursuing',
       description: 'Comprehensive computer science program focusing on software development, algorithms, data structures, and emerging technologies.',
       subjects: [
@@ -28,7 +28,7 @@ export default function Education() {
         'Artificial Intelligence'
       ],
       achievements: [
-        'Consistent academic performance with 8.1 CGPA',
+        'Consistent academic performance with 8.5 CGPA',
         'Active participation in coding competitions',
         'Completed multiple technical projects',
         'Member of Computer Science Club'

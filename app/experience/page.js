@@ -10,15 +10,14 @@ export default function Experience() {
     {
       id: 1,
       company: 'Gradious',
-      role: 'Full Stack Trainee',
+      role: 'Full Stack & DSA Trainee',
       period: 'Feb 2025 – Present',
       location: 'Hyderabad, India',
       type: 'Trainee',
-      description: 'Intensive full-stack development training program focusing on modern web technologies, system design, and software development best practices.',
+      description: 'Intensive full-stack development training program focusing on modern web technologies and software development best practices.',
       responsibilities: [
         'Training in Data Structures & Algorithms fundamentals',
         'Building full-stack projects using MERN stack',
-        'Learning system design and architecture patterns',
         'Collaborating on team projects with version control',
         'Participating in code reviews and technical discussions'
       ],
@@ -32,16 +31,20 @@ export default function Experience() {
   ]
 
   const skills = [
-    'Full-Stack Development',
-    'MERN Stack',
-    'Data Structures & Algorithms',
-    'System Design',
-    'Problem Solving',
-    'Team Collaboration',
-    'Version Control',
-    'Code Review',
-    'Agile Methodology'
-  ]
+    "Full-Stack Development",
+    "MERN Stack",
+    "Data Structures & Algorithms",
+    "Problem Solving",
+    "Team Collaboration",
+    "Version Control (Git)",
+    "Code Review",
+    "Agile Methodology",
+    "Postman",
+    "VS Code",
+    "Communication",
+    "Open Source Contribution",
+  ];
+
 
   return (
     <div className="min-h-screen pt-20 pb-12">
@@ -209,17 +212,15 @@ export default function Experience() {
                   <div>
                     <h4 className="font-semibold mb-3 text-blue-400">Short-term Goals</h4>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>• Master advanced React patterns and performance optimization</li>
+                      <li>• Master advanced DSA </li>
                       <li>• Contribute to open-source projects</li>
                       <li>• Build scalable full-stack applications</li>
-                      <li>• Enhance system design knowledge</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3 text-purple-400">Long-term Goals</h4>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• Become a senior full-stack developer</li>
-                      <li>• Lead development teams</li>
                       <li>• Specialize in AI/ML integration</li>
                       <li>• Build innovative tech solutions</li>
                     </ul>

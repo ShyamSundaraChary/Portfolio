@@ -9,16 +9,16 @@ import { Code, Database, Palette, Wrench } from 'lucide-react'
 export default function About() {
   const skills = {
     Frontend: [
-      'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Next.js', 'TypeScript', 'Framer Motion'
+      'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Next.js', 'Framer Motion'
     ],
     Backend: [
-      'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'REST APIs', 'GraphQL', 'JWT', 'Socket.io'
+      'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'REST APIs', 'JWT', 'Socket.io'
     ],
     Languages: [
-      'Python', 'Java', 'C++', 'C', 'JavaScript', 'TypeScript', 'SQL', 'NoSQL'
+      'Python', 'Java', 'C++', 'C', 'JavaScript', 'SQL', 'NoSQL'
     ],
     Tools: [
-      'Git', 'GitHub', 'Postman', 'VS Code', 'Docker', 'AWS', 'Firebase', 'Vercel'
+      'Git', 'GitHub', 'Postman', 'VS Code', 'Firebase', 'Vercel'
     ]
   }
 
@@ -78,18 +78,23 @@ export default function About() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    I'm a passionate Full Stack Developer with strong skills in Python, JavaScript, and the MERN stack. 
-                    I enjoy solving complex problems through Data Structures & Algorithms and building smart, 
-                    AI-powered web applications.
+                    I'm a passionate Full Stack Developer with strong skills in
+                    Python, JavaScript, and the MERN stack. I enjoy solving
+                    complex problems through Data Structures & Algorithms and
+                    building smart, AI-powered web applications.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    I'm always eager to learn, explore new technologies, and create meaningful digital solutions 
-                    that make a real impact. Whether it's building scalable web applications or experimenting 
-                    with the latest AI frameworks, I'm driven by curiosity and innovation.
+                    I'm always eager to learn, explore new technologies, and
+                    create meaningful digital solutions that make a real impact.
+                    Whether it's building scalable web applications or
+                    experimenting with the latest AI frameworks, I'm driven by
+                    curiosity and innovation.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Currently pursuing my B.Tech in Computer Science Engineering at ACE Engineering College, 
-                    I'm constantly working on projects that challenge me to grow as a developer and problem solver.
+                    Currently pursuing my B.Tech in Computer Science Engineering
+                    at ACE Engineering College, I'm constantly working on
+                    projects that challenge me to grow as a developer and
+                    problem solver.
                   </p>
                 </CardContent>
               </Card>
@@ -97,14 +102,22 @@ export default function About() {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-blue-400 mb-2">15+</div>
-                    <div className="text-sm text-muted-foreground">Projects Completed</div>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
+                      10+
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Projects Completed
+                    </div>
                   </CardContent>
                 </Card>
                 <Card className="text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-purple-400 mb-2">8+</div>
-                    <div className="text-sm text-muted-foreground">Technologies</div>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">
+                      8+
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Technologies
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -119,22 +132,32 @@ export default function About() {
           >
             <Card className="border-2 border-purple-500/20 bg-gradient-to-br from-purple-500/5 to-pink-500/5">
               <CardHeader>
-                <CardTitle className="text-2xl text-center">Technical Skills</CardTitle>
+                <CardTitle className="text-2xl text-center">
+                  Technical Skills
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <Tabs defaultValue="Frontend" className="w-full">
                   <TabsList className="grid w-full grid-cols-4">
                     {Object.keys(skills).map((category) => (
-                      <TabsTrigger key={category} value={category} className="flex items-center gap-2">
+                      <TabsTrigger
+                        key={category}
+                        value={category}
+                        className="flex items-center gap-2"
+                      >
                         {skillIcons[category]}
                         <span className="hidden sm:inline">{category}</span>
                       </TabsTrigger>
                     ))}
                   </TabsList>
-                  
+
                   {Object.entries(skills).map(([category, skillList]) => (
-                    <TabsContent key={category} value={category} className="mt-6">
-                      <div className="flex flex-wrap gap-3">
+                    <TabsContent
+                      key={category}
+                      value={category}
+                      className="mt-6"
+                    >
+                      <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
                         {skillList.map((skill, index) => (
                           <motion.div
                             key={skill}
@@ -167,27 +190,31 @@ export default function About() {
           >
             <Card className="border-2 border-pink-500/20 bg-gradient-to-br from-pink-500/5 to-blue-500/5">
               <CardHeader>
-                <CardTitle className="text-2xl text-center">Interests & Hobbies</CardTitle>
+                <CardTitle className="text-2xl text-center">
+                  Interests & Hobbies
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-blue-400">Professional Interests</h3>
+                    <h3 className="text-lg font-semibold text-blue-400">
+                      Professional Interests
+                    </h3>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• Artificial Intelligence & Machine Learning</li>
                       <li>• Data Structures & Algorithms</li>
                       <li>• Web Development & UI/UX Design</li>
-                      <li>• System Design & Architecture</li>
                       <li>• Open Source Contributions</li>
                     </ul>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-purple-400">Personal Interests</h3>
+                    <h3 className="text-lg font-semibold text-purple-400">
+                      Personal Interests
+                    </h3>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• Competitive Programming</li>
-                      <li>• Tech Blog Writing</li>
-                      <li>• Learning New Technologies</li>
-                      <li>• Problem Solving</li>
+                      <li>• Exploring Emerging Technologies</li>
+                      <li>• Logical and Analytical Problem Solving</li>
                       <li>• Continuous Learning</li>
                     </ul>
                   </div>
@@ -198,5 +225,5 @@ export default function About() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

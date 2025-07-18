@@ -81,7 +81,7 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: 'Advanced Weather App',
+      title: 'Dynamic Weather App using JS',
       description: 'Responsive weather application with live location support, detailed forecasts, and animated weather visualizations using vanilla JavaScript.',
       longDescription: 'A feature-rich weather application that provides comprehensive weather information with beautiful animations and intuitive user interface. Includes location-based weather, extended forecasts, and interactive weather maps.',
       image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',

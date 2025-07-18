@@ -1,8 +1,7 @@
 'use client'
-
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { ArrowDown, Download, Mail, Github, Linkedin, Code, Brain, Zap } from 'lucide-react'
+import { ArrowDown, Download, Mail, Github, Linkedin, Code, Brain, Zap ,Smartphone} from 'lucide-react'
 import { TypewriterEffect } from '@/components/typewriter-effect'
 import { ParticleBackground } from '@/components/particle-background'
 
@@ -17,7 +16,6 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       <ParticleBackground />
-      
       {/* Hero Section */}
       <section className="relative z-10 min-h-screen flex items-center justify-center px-4">
         <div className="container mx-auto max-w-6xl">
@@ -39,7 +37,11 @@ export default function Home() {
                 </h1>
                 <div className="text-xl md:text-2xl text-muted-foreground mb-6">
                   <TypewriterEffect
-                    words={['Full-Stack Developer', 'AI Enthusiast', 'DSA Lover']}
+                    words={[
+                      "Full-Stack Developer",
+                      "AI Enthusiast",
+                      "DSA Lover",
+                    ]}
                     className="text-xl md:text-2xl"
                   />
                 </div>
@@ -51,9 +53,10 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-lg md:text-xl text-muted-foreground leading-relaxed"
               >
-                Building scalable solutions with{' '}
-                <span className="text-blue-400 font-semibold">AI</span>,{' '}
-                <span className="text-purple-400 font-semibold">DSA</span>, and the{' '}
+                Building scalable solutions with{" "}
+                <span className="text-blue-400 font-semibold">AI</span>,{" "}
+                <span className="text-purple-400 font-semibold">DSA</span>, and
+                the{" "}
                 <span className="text-pink-400 font-semibold">MERN Stack</span>.
                 Passionate about creating meaningful digital experiences.
               </motion.p>
@@ -67,18 +70,21 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                  onClick={() => window.open('/resume.pdf', '_blank')}
+                  onClick={() =>
+                    window.open("/resume.pdf", "_blank", "noopener,noreferrer")
+                  }
                 >
                   <Download className="mr-2 h-5 w-5" />
-                  Download Resume
+                  View Resume
                 </Button>
+
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-6 rounded-lg transition-all duration-300"
+                  className="border-2 border-purple-400 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-6 rounded-lg transition-all duration-300"
                   onClick={scrollToContact}
                 >
-                  <Mail className="mr-2 h-5 w-5" />
+                  <Mail className="mr-2 h-6 w-6" />
                   Contact Me
                 </Button>
               </motion.div>
@@ -123,7 +129,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
-              
+
               {/* Floating Icons */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -167,7 +173,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative z-10 py-20 bg-card/50 backdrop-blur-sm">
+      <section
+        id="contact"
+        className="relative z-10 py-20 bg-card/50 backdrop-blur-sm"
+      >
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -175,11 +184,14 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Connect</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Let's Connect
+            </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Ready to build something amazing together? Let's discuss your next project.
+              Ready to build something amazing together? Let's discuss your next
+              project.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -187,14 +199,16 @@ export default function Home() {
               >
                 <Mail className="h-8 w-8 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <p className="text-muted-foreground">shyamsundarachary22@gmail.com</p>
+                <p className="text-muted-foreground">
+                  shyamsundarachary22@gmail.com
+                </p>
               </motion.div>
-              
+
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="p-6 bg-card border rounded-lg shadow-lg"
               >
-                <span className="text-2xl mx-auto mb-4 block">📱</span>
+                <Smartphone className="h-8 w-8 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Phone</h3>
                 <p className="text-muted-foreground">+91 9030503722</p>
               </motion.div>
@@ -212,5 +226,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
