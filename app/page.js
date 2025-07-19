@@ -6,15 +6,9 @@ import { TypewriterEffect } from "@/components/typewriter-effect";
 import { ParticleBackground } from "@/components/particle-background";
 
 export default function Home() {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden my-20 lg:my-0">
       <ParticleBackground />
       {/* Hero Section */}
       <section className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8">
@@ -82,7 +76,12 @@ export default function Home() {
                   size="default"
                   variant="outline"
                   className="border-2 border-purple-400 text-purple-400 hover:bg-purple-500 hover:text-white px-6 py-4 sm:px-8 sm:py-6 rounded-lg transition-all duration-300 min-w-[44px] min-h-[44px]"
-                  onClick={scrollToContact}
+                  onClick={() =>
+                    window.open(
+                      "mailto:shyamsundarachary22@gmail.com",
+                      "_blank"
+                    )
+                  }
                 >
                   <Mail className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                   Contact Me
@@ -101,7 +100,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-blue-400 transition-colors duration-300"
                 >
-                  <Github className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <Github className="h-7 w-7 sm:h-6 sm:w-6" />
                 </a>
                 <a
                   href="https://linkedin.com/in/shyam-sundara-chary"
