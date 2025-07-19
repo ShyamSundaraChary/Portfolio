@@ -72,7 +72,11 @@ export default function Home() {
                   View Resume
                 </Button>
 
-                <a href="mailto:shyamsundarachary22@gmail.com">
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=shyamsundarachary22@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button
                     size="default"
                     variant="outline"
