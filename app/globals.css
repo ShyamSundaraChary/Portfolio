@@ -9,6 +9,8 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 0 1rem;
+    /* Added for mobile */
 }
 
 code {
@@ -33,13 +35,16 @@ code {
 
 .App-header {
     background-color: #0f0f10;
-    min-height: 100vh;
+    min-height: auto;
+    /* Changed from 100vh for flexibility */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    padding: 1rem;
+    /* Added padding */
 }
 
 .App-link {
@@ -50,15 +55,27 @@ code {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
+@media (max-width: 640px) {
+    .App-header {
+        font-size: calc(8px + 1.5vmin);
+        padding: 0.5rem;
+    }
 
+    h1 {
+        font-size: 1.5rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
 
 @layer base {
-  :root {
+    :root {
         --background: 0 0% 100%;
         --foreground: 222.2 84% 4.9%;
         --card: 0 0% 100%;
@@ -93,7 +110,8 @@ code {
         --sidebar-border: 220 13% 91%;
         --sidebar-ring: 217.2 91.2% 59.8%;
     }
-  .dark {
+
+    .dark {
         --background: 222.2 84% 4.9%;
         --foreground: 210 40% 98%;
         --card: 222.2 84% 4.9%;
@@ -129,13 +147,12 @@ code {
     }
 }
 
-
-
 @layer base {
-  * {
-    @apply border-border;
+    * {
+        @apply border-border;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
 }
