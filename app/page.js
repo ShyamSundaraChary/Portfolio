@@ -72,20 +72,16 @@ export default function Home() {
                   View Resume
                 </Button>
 
-                <Button
-                  size="default"
-                  variant="outline"
-                  className="border-2 border-purple-400 text-purple-400 hover:bg-purple-500 hover:text-white px-6 py-4 sm:px-8 sm:py-6 rounded-lg transition-all duration-300 min-w-[44px] min-h-[44px]"
-                  onClick={() =>
-                    window.open(
-                      "mailto:shyamsundarachary22@gmail.com",
-                      "_blank"
-                    )
-                  }
-                >
-                  <Mail className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-                  Contact Me
-                </Button>
+                <a href="mailto:shyamsundarachary22@gmail.com">
+                  <Button
+                    size="default"
+                    variant="outline"
+                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-500 hover:text-white px-6 py-4 sm:px-8 sm:py-6 rounded-lg transition-all duration-300 min-w-[44px] min-h-[44px]"
+                  >
+                    <Mail className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                    Contact Me
+                  </Button>
+                </a>
               </motion.div>
 
               <motion.div
